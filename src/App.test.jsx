@@ -37,7 +37,7 @@ beforeAll(() => server.listen())
 // 🚨 Close server when complete
 afterAll(() => server.close())
 
-test('Should render the header', async () => {
+test.only('Should render the header', async () => {
   render(<App />)
   const banner = screen.getByRole('banner')
   const headerImg = screen.getByAltText(/alchemy/i)
